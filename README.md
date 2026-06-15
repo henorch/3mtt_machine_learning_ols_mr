@@ -1,53 +1,33 @@
-# Marketing ROI Analysis Using Simple Linear Regression
-
+## Marketing ROI Analysis Using Multiple Linear Regression
 ## Project Overview
+This project applies Multiple Linear Regression using Python and statsmodels to evaluate how different media channels drive revenue. By assessing statistical significance and model fit, this analysis isolates high-performing channels to provide a data-backed roadmap for marketing budget optimization.
 
-This project uses Simple Linear Regression to determine which marketing channel most strongly influences sales.
+## Model Summary & Findings
 
-## Objectives
+## Core Regression Equation
 
-- Clean and explore marketing data
-- Identify the best predictor
-- Build OLS regression model
-- Validate assumptions
-- Interpret results
-- Recommend marketing budget allocation
+    Sales=43.8100+8.2843(Radio)+0.1022(Social Media)
+    
+Note: The OLS model automatically excluded the TV feature due to perfect collinearity or data constraints 
 
-## Installation
+## Key Performance Indicators
 
-pip install pandas numpy matplotlib seaborn scipy statsmodels
+1. Goodness of Fit Adjusted (R-Squared) 
+    Value: 0.735 (73.5%)
 
-## Run
+## Interpretation: 
+Roughly 73.5% of the variance in Sales is explained by the changes in Radio and Social Media advertising spend. The model is highly robust, and the overall regression is statistically sound F-statistic = 794.1, p approx 0.00.
 
-Open:
 
-regression_analysis.ipynb
-
-Execute all cells.
-
-## Model Summary
-
-A multiple linear regression model was developed to determine the impact of TV, Radio, and Social Media advertising expenditures on Sales.
-
-## The model seeks to answer:
-
-Which advertising channels significantly influence sales?
-
-## Key indicators
-
-## R-squared 
-At a value of 99.9% which aim at predicting sales variation using TV, Radio and Social Media advertising expenditure as feature, at 99.9% there is high level of confidence that almost every changes in sales level are explainable by the features under consideration
-
-## Coefficients
-
-Sales=−0.134+3.5626(TV)−0.004(Radio)+0.005(Social_Media)
-
-The coefficient indicates that while holding other variable constant a unit increament in TV advertisment result in 3.5626 increament in sales, a unit increase in Radio advertisment expenses result in small reduction in over sales while a unit increase in social media advertisment result in 0.005 increase in sale, The Business implication of this is that TV advertisment has a significant impact on sales.
 
 
 ## P-Value
-given that TV, Radio and Social media has the following p-value 0.000, 0.685 and 0.862 respectively the figures shows that only TV has a statistical significance to overall Sales
+given that Radio and Social media has the following p-value 0.000, 0.927 respectively the figures shows that only Radio has a statistical significance to overall Sales
+
 
 ## Business Recommendation (ROI-Based)
 
-TV advertising should receive the highest priority in future marketing budget allocation because it is the only channel with a statistically significant and substantial impact on sales. Radio and Social Media spending should be reviewed, optimized, or re-evaluated before allocating additional resources, since their effects on sales are statistically insignificant.
+Prioritize Radio Allocations: Radio is the clear performance driver for this brand. It offers a massive, statistically significant returns yield ($8.28 return per unit spent). Future marketing budgets should heavily favor this channel.Halt or Restructure Social 
+
+
+Media Spend: Social Media investments show near-zero financial returns and complete statistical insignificance. Budgets should be paused or strictly audited for targeting errors before any further money is funneled here.
